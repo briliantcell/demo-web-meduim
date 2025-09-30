@@ -1,0 +1,629 @@
+<!doctype html>
+<html lang="id">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Paket Website Medium — Bikin Website 5 Halaman | Jasa Web Profesional</title>
+  <meta name="description" content="Paket Website Medium: 5 halaman, desain custom & responsif, SEO dasar, form kontak & WhatsApp, galeri, 3 revisi, Google Analytics, bimbingan 2 sesi, gratis hosting & domain 1 tahun.">
+  <meta name="keywords" content="website, paket website, jasa web, hosting gratis, domain gratis, SEO, Google Analytics, web design">
+  <meta name="author" content="Nama Kamu">
+  <link rel="icon" href="data:;base64,iVBORw0KGgo="> <!-- ganti dengan favicon kamu -->
+
+  <!-- Open Graph / Social -->
+  <meta property="og:title" content="Paket Website Medium — Jasa Web Profesional">
+  <meta property="og:description" content="Website 5 halaman lengkap, desain custom, SEO dasar, hosting & domain 1 tahun.">
+  <meta property="og:type" content="website">
+  <meta property="og:image" content=""> <!-- isi jika punya gambar -->
+
+  <!-- Structured data (JSON-LD) -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Service",
+    "name": "Paket Website Medium",
+    "provider": {
+      "@type": "Person",
+      "name": "Nama Kamu"
+    },
+    "description": "Website 5 halaman lengkap, desain custom & responsif, SEO dasar, hosting & domain 1 tahun.",
+    "serviceType": "Web Development",
+    "areaServed": "ID"
+  }
+  </script>
+
+  <!-- Google Fonts untuk ikon -->
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+  
+  <style>
+    :root{
+      --bg:#0f172a; --accent:#06b6d4; --card:#0b1220; --muted:#94a3b8; --white:#ffffff;
+      --maxw:1100px;
+      --transition: all 0.3s ease;
+    }
+    *{box-sizing:border-box}
+    body{font-family:Inter,system-ui,Segoe UI,Roboto,Arial;line-height:1.5;margin:0;background:linear-gradient(180deg,#021024 0%,#081228 100%);color:var(--white); scroll-behavior: smooth; position: relative;}
+    .container{max-width:var(--maxw);margin:0 auto;padding:28px; position: relative; z-index: 10;}
+    header{display:flex;align-items:center;justify-content:space-between;padding:16px 0; position: sticky; top: 0; background: rgba(15, 23, 42, 0.9); backdrop-filter: blur(10px); z-index: 100;}
+    .logo{display:flex;gap:12px;align-items:center}
+    .logo .mark{width:44px;height:44px;border-radius:8px;background:linear-gradient(135deg,var(--accent),#7c3aed);display:flex;align-items:center;justify-content:center;font-weight:700}
+    nav{display:flex;gap:12px}
+    nav a{color:var(--muted);text-decoration:none;font-size:14px; transition: var(--transition); position: relative;}
+    nav a:hover {color: var(--accent);}
+    nav a::after {
+      content: '';
+      position: absolute;
+      width: 0;
+      height: 2px;
+      bottom: -4px;
+      left: 0;
+      background-color: var(--accent);
+      transition: var(--transition);
+    }
+    nav a:hover::after {
+      width: 100%;
+    }
+    .hero{display:grid;grid-template-columns:1fr;gap:20px;align-items:center;padding:24px 0}
+    .hero .left{padding:16px}
+    h1{font-size:28px;margin-bottom:8px; line-height: 1.2;}
+    p.lead{color:var(--muted);margin-bottom:16px; font-size: 1.1rem;}
+    .btn{display:inline-block;padding:10px 16px;border-radius:10px;background:var(--accent);color:#042029;text-decoration:none;font-weight:600; transition: var(--transition); border: none; cursor: pointer;}
+    .btn:hover {transform: translateY(-2px); box-shadow: 0 4px 12px rgba(6, 182, 212, 0.3);}
+    .secondary{background:transparent;border:1px solid rgba(255,255,255,0.08);color:var(--white);padding:10px 14px;border-radius:10px; transition: var(--transition); text-decoration: none; display: inline-block;}
+    .secondary:hover {background: rgba(255,255,255,0.05);}
+
+    .features{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:12px;margin-top:18px}
+    .card{background:rgba(255,255,255,0.02);padding:14px;border-radius:12px; transition: var(--transition); border: 1px solid rgba(255,255,255,0.05);}
+    .card:hover {transform: translateY(-4px); box-shadow: 0 8px 20px rgba(0,0,0,0.2);}
+    .grid-cta{display:flex;gap:12px;align-items:center; flex-wrap: wrap;}
+
+    /* Gallery */
+    .gallery{display:grid;grid-template-columns:repeat(auto-fit,minmax(140px,1fr));gap:10px;margin-top:18px}
+    .gallery img{width:100%;display:block;border-radius:8px;cursor:pointer; transition: var(--transition); aspect-ratio: 3/2; object-fit: cover;}
+    .gallery img:hover {transform: scale(1.03);}
+
+    /* Contact form */
+    form{display:grid;gap:10px;background:rgba(255,255,255,0.02);padding:16px;border-radius:12px; border: 1px solid rgba(255,255,255,0.05);}
+    input,textarea,select{background:transparent;border:1px solid rgba(255,255,255,0.06);padding:10px;border-radius:8px;color:var(--white);min-height:44px; transition: var(--transition); font-family: inherit;}
+    input:focus, textarea:focus, select:focus {outline: none; border-color: var(--accent);}
+    textarea{min-height:100px;resize:vertical}
+
+    footer{padding:18px 0;color:var(--muted);font-size:14px;text-align:center; border-top: 1px solid rgba(255,255,255,0.05); margin-top: 40px;}
+
+    /* Responsive split */
+    @media(min-width:860px){
+      .hero{grid-template-columns:1fr 420px}
+      h1{font-size:36px}
+    }
+
+    /* Simple modal for gallery */
+    .modal{position:fixed;inset:0;background:rgba(0,0,0,0.8);display:flex;align-items:center;justify-content:center;padding:20px;visibility:hidden;opacity:0;transition:all .18s; z-index: 1000;}
+    .modal.open{visibility:visible;opacity:1}
+    .modal img{max-width:95%;max-height:85%;border-radius:8px; box-shadow: 0 10px 30px rgba(0,0,0,0.5);}
+    .modal-close {position: absolute; top: 20px; right: 20px; background: rgba(0,0,0,0.5); color: white; border: none; width: 40px; height: 40px; border-radius: 50%; font-size: 20px; cursor: pointer; display: flex; align-items: center; justify-content: center;}
+    
+    /* FAQ Section */
+    .faq-section {margin-top: 40px;}
+    .faq-item {margin-bottom: 12px; border-bottom: 1px solid rgba(255,255,255,0.05);}
+    .faq-question {padding: 16px 0; cursor: pointer; display: flex; justify-content: space-between; align-items: center; font-weight: 600;}
+    .faq-answer {padding: 0 0 16px 0; color: var(--muted); display: none;}
+    .faq-item.active .faq-answer {display: block;}
+    .faq-toggle {transition: var(--transition);}
+    .faq-item.active .faq-toggle {transform: rotate(180deg);}
+    
+    /* Process Section */
+    .process {margin-top: 40px;}
+    .process-steps {display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 16px; margin-top: 20px;}
+    .process-step {text-align: center; padding: 20px; background: rgba(255,255,255,0.02); border-radius: 12px; border: 1px solid rgba(255,255,255,0.05);}
+    .step-number {width: 40px; height: 40px; border-radius: 50%; background: var(--accent); color: #042029; display: flex; align-items: center; justify-content: center; margin: 0 auto 12px; font-weight: bold;}
+    
+    /* Notification */
+    .notification {position: fixed; bottom: 20px; right: 20px; background: var(--accent); color: #042029; padding: 12px 16px; border-radius: 8px; box-shadow: 0 4px 12px rgba(0,0,0,0.2); z-index: 1000; transform: translateY(100px); opacity: 0; transition: var(--transition);}
+    .notification.show {transform: translateY(0); opacity: 1;}
+    
+    /* WhatsApp Floating Button */
+    .whatsapp-float {position: fixed; bottom: 20px; left: 20px; background: #25D366; color: white; width: 60px; height: 60px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 24px; box-shadow: 0 4px 12px rgba(0,0,0,0.2); z-index: 1000; transition: var(--transition);}
+    .whatsapp-float:hover {transform: scale(1.1);}
+    
+    /* Loading Animation */
+    .loading {display: none; text-align: center; padding: 10px;}
+    .loading-spinner {width: 24px; height: 24px; border: 3px solid rgba(255,255,255,0.1); border-radius: 50%; border-top-color: var(--accent); animation: spin 1s linear infinite; margin: 0 auto;}
+    @keyframes spin {to {transform: rotate(360deg);}}
+    
+    /* Additional Info Cards */
+    .info-cards {display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 12px; margin-top: 20px;}
+    
+    /* Testimoni dengan Google Icons */
+    .testimonial-item {display: flex; align-items: flex-start; gap: 12px; margin-bottom: 16px;}
+    .testimonial-avatar {width: 40px; height: 40px; border-radius: 50%; background: var(--accent); display: flex; align-items: center; justify-content: center; flex-shrink: 0;}
+    .testimonial-content {flex: 1;}
+    .testimonial-name {font-weight: bold; margin-bottom: 4px;}
+    .testimonial-text {color: var(--muted); font-size: 14px;}
+    .testimonial-rating {display: flex; gap: 2px; margin-top: 4px;}
+    .star {color: #FFD700; font-size: 14px;}
+    
+    /* Google Maps Section */
+    .maps-section {margin-top: 40px;}
+    .maps-container {margin-top: 16px; border-radius: 12px; overflow: hidden; height: 300px; position: relative;}
+    .maps-frame {width: 100%; height: 100%; border: none;}
+    .maps-overlay {position: absolute; top: 0; left: 0; right: 0; bottom: 0; background: rgba(15, 23, 42, 0.7); display: flex; align-items: center; justify-content: center; flex-direction: column; color: white; text-align: center; padding: 20px;}
+    
+    /* Particles.js container */
+    #particles-js {position: absolute; top: 0; left: 0; width: 100%; height: 100%; z-index: 1;}
+  </style>
+</head>
+<body>
+  <!-- Particles.js container -->
+  <div id="particles-js"></div>
+  
+  <!-- WhatsApp Floating Button -->
+  <a href="https://wa.me/6283166584901" class="whatsapp-float" target="_blank" aria-label="Hubungi via WhatsApp">
+    <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+      <path d="M12.017 2.047C6.207 2.047 1.451 6.804 1.451 12.614c0 1.846.48 3.582 1.32 5.082L2 22l4.396-.771c1.454.78 3.102 1.227 4.621 1.227 5.811 0 10.567-4.756 10.567-10.567S17.828 2.047 12.017 2.047zm-5.94 14.57a7.86 7.86 0 01-1.3-4.623c0-4.35 3.536-7.886 7.886-7.886s7.886 3.536 7.886 7.886-3.536 7.886-7.886 7.886a7.774 7.774 0 01-3.762-.97l-1.824.32z"/>
+      <path d="M17.025 14.613c-.246-.123-1.456-.718-1.682-.8-.226-.082-.39-.123-.554.123-.164.246-.639.8-.783.965-.144.164-.288.185-.534.062-.246-.123-1.04-.383-1.98-1.221-.732-.65-1.226-1.455-1.37-1.701-.144-.246-.015-.38.108-.503.112-.112.246-.288.37-.432.123-.144.164-.246.246-.41.082-.164.041-.308-.02-.432-.062-.123-.554-1.333-.759-1.825-.2-.48-.405-.415-.554-.422-.144-.008-.308-.008-.472-.008-.164 0-.431.062-.656.308-.226.246-.863.843-.863 2.056 0 1.213.884 2.385 1.007 2.55.123.164 1.742 2.657 4.225 3.728.588.256 1.047.409 1.405.523.588.185 1.125.162 1.547.098.474-.072 1.456-.595 1.661-1.17.205-.575.205-1.067.143-1.17-.062-.103-.226-.164-.472-.287z"/>
+    </svg>
+  </a>
+
+  <div class="container">
+    <header>
+      <div class="logo">
+        <div class="mark">W</div>
+        <div>
+          <strong>JasaWeb</strong><br>
+          <small style="color:var(--muted);font-size:12px">Paket Website Medium</small>
+        </div>
+      </div>
+      <nav>
+        <a href="#fitur">Fitur</a>
+        <a href="#galeri">Galeri</a>
+        <a href="#harga">Harga</a>
+        <a href="#kontak">Kontak</a>
+      </nav>
+    </header>
+
+    <main class="hero">
+      <section class="left">
+        <h1>Buat Website 5 Halaman Profesional — Cepat & Hemat</h1>
+        <p class="lead">Paket lengkap untuk UMKM, portofolio, dan bisnis baru: desain custom & responsif, SEO dasar, form & WhatsApp, galeri, 3 revisi, Google Analytics, bimbingan 2 sesi, ONLY FILE.</p>
+        <div class="grid-cta">
+          <a class="btn" href="#kontak" onclick="document.getElementById('nama').focus();return true">Pesan Sekarang</a>
+          <a class="secondary" href="#harga">Lihat Rincian</a>
+        </div>
+
+        <div id="fitur" class="features" style="margin-top:18px">
+          <div class="card"><strong>5 Halaman</strong><div style="color:var(--muted);font-size:13px">Home, Tentang, Layanan, Galeri/Produk, Kontak</div></div>
+          <div class="card"><strong>Desain Custom</strong><div style="color:var(--muted);font-size:13px">Sesuai brand + tampilan mobile-friendly</div></div>
+          <div class="card"><strong>SEO Basic</strong><div style="color:var(--muted);font-size:13px">Meta tags, sitemap, performance tips</div></div>
+          <div class="card"><strong>3x Revisi</strong><div style="color:var(--muted);font-size:13px">Revisi desain agar sesuai keinginan</div></div>
+        </div>
+
+        <section id="galeri" style="margin-top:18px">
+          <h3 style="margin-bottom:8px">Contoh Layout / Galeri</h3>
+          <div class="gallery" aria-hidden="false">
+            <img src="https://picsum.photos/seed/1/600/400" alt="sample 1" onclick="openModal(this.src)">
+            <img src="https://picsum.photos/seed/2/600/400" alt="sample 2" onclick="openModal(this.src)">
+            <img src="https://picsum.photos/seed/3/600/400" alt="sample 3" onclick="openModal(this.src)">
+            <img src="https://picsum.photos/seed/4/600/400" alt="sample 4" onclick="openModal(this.src)">
+          </div>
+        </section>
+
+        <!-- Process Section -->
+        <section class="process">
+          <h3>Proses Pengerjaan</h3>
+          <div class="process-steps">
+            <div class="process-step">
+              <div class="step-number">1</div>
+              <h4>Konsultasi</h4>
+              <p style="color:var(--muted);font-size:14px">Diskusikan kebutuhan dan tujuan website Anda</p>
+            </div>
+            <div class="process-step">
+              <div class="step-number">2</div>
+              <h4>Desain</h4>
+              <p style="color:var(--muted);font-size:14px">Buat mockup dan desain sesuai permintaan</p>
+            </div>
+            <div class="process-step">
+              <div class="step-number">3</div>
+              <h4>Development</h4>
+              <p style="color:var(--muted);font-size:14px">Koding dan implementasi semua fitur</p>
+            </div>
+            <div class="process-step">
+              <div class="step-number">4</div>
+              <h4>Launch</h4>
+              <p style="color:var(--muted);font-size:14px">Website siap digunakan dan online</p>
+            </div>
+          </div>
+        </section>
+
+        <!-- FAQ Section -->
+        <section class="faq-section">
+          <h3>Pertanyaan Umum</h3>
+          <div class="faq-list">
+            <div class="faq-item">
+              <div class="faq-question" onclick="toggleFAQ(this)">
+                Berapa lama pengerjaan website?
+                <span class="faq-toggle">▼</span>
+              </div>
+              <div class="faq-answer">
+                Rata-rata pengerjaan memakan waktu 7-14 hari kerja, tergantung kompleksitas dan kecepatan feedback dari klien.
+              </div>
+            </div>
+            <div class="faq-item">
+              <div class="faq-question" onclick="toggleFAQ(this)">
+                Apakah bisa request fitur tambahan?
+                <span class="faq-toggle">▼</span>
+              </div>
+              <div class="faq-answer">
+                Tentu bisa! Kami terbuka untuk menambahkan fitur sesuai kebutuhan dengan penyesuaian harga.
+              </div>
+            </div>
+            <div class="faq-item">
+              <div class="faq-question" onclick="toggleFAQ(this)">
+                Apakah hosting dan domain benar-benar gratis?
+                <span class="faq-toggle">▼</span>
+              </div>
+              <div class="faq-answer">
+                Ya, Anda mendapatkan hosting dan domain gratis untuk 1 tahun pertama. Setelah itu, biaya perpanjangan sesuai tarif standar penyedia hosting.
+              </div>
+            </div>
+            <div class="faq-item">
+              <div class="faq-question" onclick="toggleFAQ(this)">
+                Apakah website sudah termasuk SEO?
+                <span class="faq-toggle">▼</span>
+              </div>
+              <div class="faq-answer">
+                Ya, paket ini sudah termasuk optimasi SEO dasar seperti struktur HTML yang baik, meta tags, sitemap, dan performance optimization.
+              </div>
+            </div>
+          </div>
+        </section>
+
+      </section>
+
+      <aside style="padding:0 8px">
+        <div class="card">
+          <h3 style="margin:0 0 6px 0">Ringkasan Paket</h3>
+          <ul style="color:var(--muted);font-size:14px;margin:8px 0 0 16px">
+            <li>Website 5 Halaman</li>
+            <li>Desain Custom & Responsif</li>
+            <li>SEO Basic + Sitemap</li>
+            <li>Form Kontak & WhatsApp</li>
+            <li>Google Analytics</li>
+            <li>Hosting & Domain gratis 1 tahun</li>
+            <li>Bimbingan 2 sesi</li>
+            <li>Dukungan teknis 1 bulan</li>
+          </ul>
+          <div style="margin-top:12px;display:flex;gap:8px">
+            <a class="btn" href="#kontak">Pesan Sekarang</a>
+            <a class="secondary" href="tel:+6283166584901">Call</a>
+          </div>
+        </div>
+
+        <div class="card" style="margin-top:12px">
+          <h4 style="margin:0 0 6px 0">Testimoni</h4>
+          <div style="font-size:14px;color:var(--muted)">
+            <div class="testimonial-item">
+              <div class="testimonial-avatar">
+                <span class="material-symbols-outlined" style="color:#042029; font-size: 20px;">person</span>
+              </div>
+              <div class="testimonial-content">
+                <div class="testimonial-name">Ade</div>
+                <div class="testimonial-text">"Website nya cakep, order masuk terus!"</div>
+                <div class="testimonial-rating">
+                  <span class="star">★</span>
+                  <span class="star">★</span>
+                  <span class="star">★</span>
+                  <span class="star">★</span>
+                  <span class="star">★</span>
+                </div>
+              </div>
+            </div>
+            <div class="testimonial-item">
+              <div class="testimonial-avatar">
+                <span class="material-symbols-outlined" style="color:#042029; font-size: 20px;">person</span>
+              </div>
+              <div class="testimonial-content">
+                <div class="testimonial-name">Sari</div>
+                <div class="testimonial-text">"Proses cepet, komunikasinya enak."</div>
+                <div class="testimonial-rating">
+                  <span class="star">★</span>
+                  <span class="star">★</span>
+                  <span class="star">★</span>
+                  <span class="star">★</span>
+                  <span class="star">★</span>
+                </div>
+              </div>
+            </div>
+            <div class="testimonial-item">
+              <div class="testimonial-avatar">
+                <span class="material-symbols-outlined" style="color:#042029; font-size: 20px;">person</span>
+              </div>
+              <div class="testimonial-content">
+                <div class="testimonial-name">Rian</div>
+                <div class="testimonial-text">"Worth it — sample"</div>
+                <div class="testimonial-rating">
+                  <span class="star">★</span>
+                  <span class="star">★</span>
+                  <span class="star">★</span>
+                  <span class="star">★</span>
+                  <span class="star">★</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div id="harga" class="card" style="margin-top:12px">
+          <h4 style="margin:0 0 6px 0">Harga</h4>
+          <div style="display:flex;align-items:baseline;gap:8px">
+            <div style="font-size:20px;font-weight:700">Rp.sample</div>
+            <div style="color:var(--muted);font-size:13px">(atau cicilan)</div>
+          </div>
+          <small style="color:var(--muted)">Sample.</small>
+          <div class="info-cards" style="margin-top: 12px;">
+            <div class="card" style="padding: 8px; text-align: center;">
+              <div style="font-size: 12px; color: var(--muted);">DP</div>
+              <div style="font-weight: bold;">50%</div>
+            </div>
+            <div class="card" style="padding: 8px; text-align: center;">
+              <div style="font-size: 12px; color: var(--muted);">Sisa</div>
+              <div style="font-weight: bold;">Saat Launch</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="card" style="margin-top:12px">
+          <h4 style="margin:0 0 6px 0">Garansi</h4>
+          <div style="font-size:14px;color:var(--muted)">
+            <p style="margin:6px 0">✅ Revisi hingga 3x</p>
+            <p style="margin:6px 0">✅ Dukungan teknis 1 bulan</p>
+            <p style="margin:6px 0">✅ elegant bukan harga murah kualitas website jutaan</p>
+          </div>
+        </div>
+
+      </aside>
+    </main>
+
+    <!-- Google Maps Section -->
+    <section class="maps-section">
+      <h3>Lokasi Kami</h3>
+      <div class="maps-container">
+        <iframe class="maps-frame" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3960.907243438581!2d107.60876607585283!3d-6.902392067445712!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e68e639b77db8ef%3A0x2e1a5f4a0f2a5a1a!2sBandung%2C%20Kota%20Bandung%2C%20Jawa%20Barat!5e0!3m2!1sid!2sid!4v1710000000000!5m2!1sid!2sid" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        <div class="maps-overlay">
+          <h4>Kantor JasaWeb</h4>
+          <p>Kami melayani pembuatan website untuk seluruh Indonesia</p>
+          <a href="https://maps.google.com/?q=Bandung" target="_blank" class="btn" style="margin-top: 12px;">Buka di Google Maps</a>
+        </div>
+      </div>
+    </section>
+
+    <section id="kontak" style="margin-top:24px">
+      <h3>Hubungi Kami</h3>
+      <div style="display:grid;grid-template-columns:1fr;gap:12px;margin-top:10px">
+        <form id="contactForm" onsubmit="handleSubmit(event)">
+          <input id="nama" name="nama" placeholder="Nama lengkap" required>
+          <input id="email" name="email" type="email" placeholder="Email" required>
+          <input id="telepon" name="telepon" placeholder="No. WhatsApp (contoh: 628xxxxxxxx)" required pattern="[0-9]{10,15}">
+          <select name="layanan">
+            <option value="website-medium">Paket Website Medium</option>
+            <option value="website-lain">Kustom Lain</option>
+          </select>
+          <textarea name="pesan" placeholder="Pesan / catatan" ></textarea>
+          <div class="loading" id="formLoading">
+            <div class="loading-spinner"></div>
+            <p style="margin: 8px 0 0; color: var(--muted); font-size: 14px;">Mengirim pesan...</p>
+          </div>
+          <div style="display:flex;gap:8px">
+            <button type="submit" class="btn" id="submitBtn">Kirim Pesan</button>
+            <button type="button" class="secondary" onclick="openWhatsApp()">Chat via WhatsApp</button>
+          </div>
+        </form>
+
+        <div style="display:flex;gap:12px;flex-wrap:wrap">
+          <div class="card">📍 Lokasi: Indonesia</div>
+          <div class="card">📞 WA: <a href="https://wa.me/6283166584901" target="_blank" style="color:var(--accent);text-decoration:none">+62 831-6658-4901</a></div>
+          <div class="card">📧 Email: <a href="mailto:you@domain.com" style="color:var(--accent);text-decoration:none">you@domain.com</a></div>
+        </div>
+      </div>
+    </section>
+
+    <footer style="margin-top:28px">
+      &copy; <span id="year"></span> JasaWeb — Semua hak cipta.
+    </footer>
+  </div>
+
+  <!-- Gallery modal -->
+  <div id="modal" class="modal" onclick="closeModal(event)">
+    <button class="modal-close" onclick="closeModal(event)">×</button>
+    <img id="modalImg" src="" alt="preview">
+  </div>
+
+  <!-- Notification -->
+  <div id="notification" class="notification">
+    Pesan berhasil dikirim! Kami akan menghubungi Anda segera.
+  </div>
+
+  <!-- Load Particles.js -->
+  <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+  
+  <script>
+    // Set year
+    document.getElementById('year').textContent = new Date().getFullYear();
+
+    // Initialize Particles.js
+    document.addEventListener('DOMContentLoaded', function() {
+      particlesJS('particles-js', {
+        particles: {
+          number: {
+            value: 80,
+            density: {
+              enable: true,
+              value_area: 800
+            }
+          },
+          color: {
+            value: '#06b6d4'
+          },
+          shape: {
+            type: 'circle',
+            stroke: {
+              width: 0,
+              color: '#000000'
+            }
+          },
+          opacity: {
+            value: 0.5,
+            random: true,
+            anim: {
+              enable: true,
+              speed: 1,
+              opacity_min: 0.1,
+              sync: false
+            }
+          },
+          size: {
+            value: 3,
+            random: true,
+            anim: {
+              enable: true,
+              speed: 2,
+              size_min: 0.1,
+              sync: false
+            }
+          },
+          line_linked: {
+            enable: true,
+            distance: 150,
+            color: '#06b6d4',
+            opacity: 0.4,
+            width: 1
+          },
+          move: {
+            enable: true,
+            speed: 1,
+            direction: 'none',
+            random: true,
+            straight: false,
+            out_mode: 'out',
+            bounce: false,
+            attract: {
+              enable: false,
+              rotateX: 600,
+              rotateY: 1200
+            }
+          }
+        },
+        interactivity: {
+          detect_on: 'canvas',
+          events: {
+            onhover: {
+              enable: true,
+              mode: 'grab'
+            },
+            onclick: {
+              enable: true,
+              mode: 'push'
+            },
+            resize: true
+          },
+          modes: {
+            grab: {
+              distance: 140,
+              line_linked: {
+                opacity: 1
+              }
+            },
+            push: {
+              particles_nb: 4
+            }
+          }
+        },
+        retina_detect: true
+      });
+    });
+
+    // Modal functions
+    function openModal(src){
+      const m = document.getElementById('modal');
+      document.getElementById('modalImg').src = src;
+      m.classList.add('open');
+      document.body.style.overflow = 'hidden';
+    }
+    function closeModal(e){
+      if(e.target.id === 'modal' || e.target.classList.contains('modal-close')){
+        const m = document.getElementById('modal');
+        m.classList.remove('open');
+        document.body.style.overflow = 'auto';
+      }
+    }
+
+    // FAQ toggle
+    function toggleFAQ(element) {
+      const faqItem = element.parentElement;
+      faqItem.classList.toggle('active');
+    }
+
+    // Contact form submission
+    function handleSubmit(e){
+      e.preventDefault();
+      const f = e.target;
+      const submitBtn = document.getElementById('submitBtn');
+      const loading = document.getElementById('formLoading');
+      
+      // Show loading
+      submitBtn.style.display = 'none';
+      loading.style.display = 'block';
+      
+      // Simulate form submission
+      setTimeout(() => {
+        const nama = f.nama.value.trim();
+        const email = f.email.value.trim();
+        const tel = f.telepon.value.trim();
+        const layanan = f.layanan.value;
+        const pesan = encodeURIComponent(f.pesan.value.trim() || '-');
+
+        // Try to send via fetch to an API (commented). For now, open mailto as fallback.
+        const subject = encodeURIComponent('Permintaan: ' + layanan + ' — ' + nama);
+        const body = encodeURIComponent('Nama: '+nama+'\nEmail: '+email+'\nTel: '+tel+'\nLayanan: '+layanan+'\nPesan: '+decodeURIComponent(pesan));
+        window.location.href = `mailto:you@domain.com?subject=${subject}&body=${body}`;
+        
+        // Show notification
+        showNotification();
+        
+        // Reset form
+        f.reset();
+        
+        // Hide loading, show button again
+        loading.style.display = 'none';
+        submitBtn.style.display = 'inline-block';
+      }, 1500);
+    }
+
+    // Show notification
+    function showNotification() {
+      const notification = document.getElementById('notification');
+      notification.classList.add('show');
+      setTimeout(() => {
+        notification.classList.remove('show');
+      }, 5000);
+    }
+
+    // Open WhatsApp with prefilled message
+    function openWhatsApp(){
+      const tel = document.getElementById('telepon').value || '6283166584901';
+      const msg = encodeURIComponent('Halo, saya tertarik paket Website Medium. Mohon info lebih lanjut.');
+      // ensure tel in international format without +
+      const to = tel.replace(/[^0-9]/g,'');
+      window.open(`https://wa.me/${to}?text=${msg}`, '_blank');
+    }
+
+    // Simple GA snippet placeholder (g-tag). GANTI_MEASUREMENT_ID -> masukkan ID mu
+    (function(){
+      var id = 'G-GANTI_MEASUREMENT_ID';
+      if(id && id.indexOf('G-')===0){
+        var s = document.createElement('script'); s.async=true; s.src='https://www.googletagmanager.com/gtag/js?id='+id; document.head.appendChild(s);
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);} gtag('js', new Date()); gtag('config', id);
+      }
+    })();
+  </script>
+</body>
+</html>
